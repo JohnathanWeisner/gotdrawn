@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  ul.small-block-grid-1.large-block-grid-2.small-centered.columns.post
+    each artwork in artworks
+      li
+        a.row(href=artwork.permalink)
+          if artwork.url.match(/(imgur)/)
+            img.th(src=artwork.url.slice(0, artwork.url.length - 4) + "l" + artwork.url.slice(artwork.url.length - 4, artwork.url.length))
+          else
+            img.th(src=artwork.url)
+        a.row(href="http://www.reddit.com/u/" + artwork.author)=artwork.author

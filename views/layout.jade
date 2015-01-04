@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/foundation.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .fixed
+      nav.top-bar(data-topbar, role='navigation')
+        ul.title-area
+          li.name
+            h1
+              a(href='/')='GotDrawn'
+          li.toggle-topbar.menu-icon
+            a(href='#')
+              span='Menu'
+        section.top-bar-section
+          ul.right
+            li.active
+              a(href='/')='Hot Posts'
+            li
+              a(href='/artworks/')='New Art'
+            li
+              a(href='/artworks/top')='Top Art'
+            li.has-dropdown
+              a(href='#')='Right Button Dropdown'
+              ul.dropdown
+                li
+                  a(href='#')='First link in dropdown'
+                li.active
+                  a(href='#')='Active link in dropdown'
+          ul.left
+            li
+              a(href='#')='Best Posts'
+    .row
+      block content
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='/javascripts/modernizr.js')
+    script(src='/javascripts/placeholder.js')
+    script(src='/javascripts/foundation.min.js')
+    script(src='/javascripts/foundation.clearing.js')
+    script
+      $(document).foundation();

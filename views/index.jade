@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  each post in posts
+    .post.row
+      h5.title.small-12.columns
+        a(href="http://www.reddit.com" + post.permalink)
+          =post.title
+      ul.clearing-thumbs.small-5.columns(data-clearing)
+          li
+            if post.url.match(/(imgur)/)
+              img.th(src=post.url.slice(0, post.url.length - 4) + "l" + post.url.slice(post.url.length - 4, post.url.length))
+            else
+              img.th(src=post.url style='width: 160px;')
+            br
+            .username='Submitted by ' + post.author
+      ul.clearing-thumbs.small-7.columns(data-clearing)
+        each artwork, index in post.artworks
+          li
+            if artwork.url.match(/(imgur)/)
+              a(href=artwork.url.slice(0, artwork.url.length - 4) + "l" + artwork.url.slice(artwork.url.length - 4, artwork.url.length))
+                img.th(src=artwork.url.slice(0, artwork.url.length - 4) + "b" + artwork.url.slice(artwork.url.length - 4, artwork.url.length))
+            else
+              a(href=artwork.url)
+                img.th(src=artwork.url style='width: 160px;')
+            .username=artwork.author
+

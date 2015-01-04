@@ -1,0 +1,51 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #222222;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.post {
+  padding-top: 50px;
+  background-image: url("/images/debut_dark.png");
+  background-color: #333333;
+  border-right: 1px solid #111111;
+  border-left: 1px solid #111111;
+}
+
+.title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #444444;
+  border: 1px solid #888888;
+}
+
+.username {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #CCCCCC;
+}
+
+.top-bar {
+    background: #FF9A00;
+}
+
+.top-bar-section li a:not(.button) {
+    background: #FF9A00 !important;   
+}
+
+.top-bar-section li a:not(.button):hover {
+    background: #78D5FA !important;   
+}
+
+.top-bar-section ul li.active > a {
+    background: #3D8CC4 !important;   
+}
+
+.top-bar-section ul li.active > a:hover {
+    background: #58AFED !important;   
+}
